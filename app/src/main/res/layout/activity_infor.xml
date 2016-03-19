@@ -10,39 +10,15 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.tacoma.uw.leebui99.raisethepark.InforActivity">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/login_username"
-        android:layout_marginTop="149dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:hint="@string/yourname"
-        android:inputType="text"/>
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/phoneNum"
-        android:hint="@string/email"
-        android:inputType="text"
-        android:layout_below="@+id/login_username"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:text="Submmit"
         android:id="@+id/submmit"
-        android:layout_below="@+id/phoneNum"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
         android:background="#1a237e"
-        android:onClick="loginOnClick"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
 
 
     <TextView
@@ -53,6 +29,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp"
-        android:textSize="50sp"
+        android:textSize="30sp"
         android:textColor="#455A64" />
+
+
 </RelativeLayout>

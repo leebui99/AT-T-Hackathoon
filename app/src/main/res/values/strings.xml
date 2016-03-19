@@ -4,10 +4,11 @@
     <string name="evalButton">Start Evaluation!</string>
     <string name="action_settings">Settings</string>
     <string name="next">Next!</string>
-    <string name="comment1">What do you like about the park?</string>
-    <string name="comment2">What is your suggestion for the park?</string>
-    <string name="tittle">Almost Done!</string>
+    <string name="comment1">Do you have any things to say? If so fill out the box.</string>
+    <string name="comment2">What is your suggestion for the better restroom?</string>
+    <string name="tittle">Thanks for Your Time!</string>
     <string name="yourname">Enter your name</string>
     <string name="email"> Enter your email</string>
+    <string name="finish">Thanks for Your Time!</string>
 
 </resources>

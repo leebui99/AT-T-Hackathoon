@@ -15,6 +15,8 @@ public class CommentActivity extends AppCompatActivity implements View.OnClickLi
     private EditText mFirstComment;
     private EditText mSecondComment;
     private Button mButton;
+    static String TAG = "ExelLog";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +31,9 @@ public class CommentActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        Intent mInten = new Intent(getApplicationContext(), InforActivity.class);
-        startActivity(mInten);
+        Intent mIntent = new Intent(getApplicationContext(), InforActivity.class);
+        startActivity(mIntent);
     }
+
+
 }

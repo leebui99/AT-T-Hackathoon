@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.tacoma.uw.leebui99.raisethepark.R;
 
@@ -34,12 +35,13 @@ public class QuestionForm extends AppCompatActivity implements View.OnClickListe
     private int mQuestionId = 0;
 
     private ArrayList<TheQuestion> mList;
+    private ArrayList<TheQuestion> mListChoice;
     private String mEvalQuestion;
     private TheQuestion mQuestion;
     private static final String
             url = "http://cssgate.insttech.washington.edu/~leebui99/Park.php";
     private ProgressDialog mProgressDialog;
-
+    private String mChoice;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,13 +56,39 @@ public class QuestionForm extends AppCompatActivity implements View.OnClickListe
         mAnswer5 = (RadioButton) findViewById(R.id.radioAnswer5);
 
         mNext = (Button) findViewById(R.id.buttonSubmit);
-
+        mRadioGroup = (RadioGroup) findViewById(R.id.radioAnswer);
         mNext.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
+
+        int duration = Toast.LENGTH_SHORT;
+        int radioId = mRadioGroup.getCheckedRadioButtonId();
+        View radioButton = mRadioGroup.findViewById(radioId);
+        int index = mRadioGroup.indexOfChild(radioButton);
+       // Toast.makeText(QuestionForm.this, "Index: " + index, duration).show();
+
+        switch (index){
+            case 0:
+               mChoice = mAnswer1.getText().toString();
+                break;
+            case 1:
+                mChoice = mAnswer2.getText().toString();
+                break;
+            case 2:
+                mChoice = mAnswer3.getText().toString();
+                break;
+            case 3:
+                mChoice = mAnswer4.getText().toString();
+                break;
+            case 4:
+                mChoice = mAnswer5.getText().toString();
+                break;
+
+        }
+        Toast.makeText(QuestionForm.this, "Your Selection : " + mChoice, duration).show();
 
         if (mQuestionId < mList.size()){
             mQuestion = mList.get(mQuestionId);
